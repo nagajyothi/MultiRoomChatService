@@ -1,0 +1,17 @@
+{
+  "name": "multiroomchatservice",
+  "version": "1.0.0",
+  "description": "Multi Room Chat Service application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nagajyothi Gunti",
+  "license": "BSD-2-Clause",
+  "private": true,
+  "dependencies": {
+    "express": "3.0.x",
+    "socket.io": "0.9.x",
+	"mime": "1.2.x"
+  }
+}

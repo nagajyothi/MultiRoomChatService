@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Multi-Room Chat</title>
+    <link href="StyleSheets/default.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/chat.js"></script>
+    <script src="Scripts/chat_ui.js"></script>
+    <script src="Scripts/socket.io.js"></script>
+
+</head>
+<body>
+    <div id="content">
+        <div id="room"></div>
+        <div id="roomlist"></div>
+        <div id="messages"></div>
+
+        <form id="sendform">
+            <input id="message" />
+            <input id="messagesend" type="submit" value="Send" />
+
+            <div id="helpcommands">
+                Chat Commands: 
+                <ul>
+                    <li>Change name: <code>/changename [username]</code></li>
+                    <li>Join/create room: <code>/join [roomname]</code></li>
+                    <!--<li>Private messages: <code>/private [username]</code></li>-->
+                    <li>Any other text is sent as message to the current room</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
