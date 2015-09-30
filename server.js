@@ -19,7 +19,8 @@ app.get('/', function (request, reponse) {
     reponse.redirect('default.html');
 });
 
-var port = 2825;
+var port = 8080;
+//tried with 2825 on localhost
 server.listen(port);
 console.log("Server listening to port: " + port);
 
@@ -176,6 +177,9 @@ function handleRoomJoin(socket) {
 function handleDisconnection(socket, userNames, namesUsed) {
     socket.on('disconnect', function () {
         var nameIndex = namesUsed.indexOf(userNames[socket.id]);
+        socket.broadcast.to(currentRoom[socket.id]).emit('message', {
+            text: 'SERVER: ' + userNames[socket.id] + ' left the room'
+        });
         delete namesUsed[nameIndex];
         delete userNames[socket.id];
     });

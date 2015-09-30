@@ -32,7 +32,7 @@ var socket;
 
 $(document).ready(function () {
     socket = io.connect('http://52.88.189.77/');
-    
+    //socket = io.connect('http://localhost:2825/');
     var chatApp = new chat(socket);
     socket.on('nameResult', function (result) {
         var message;
